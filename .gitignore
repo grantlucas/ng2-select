@@ -11,7 +11,6 @@ npm-debug.log
 .vscode
 
 # ignore build and dist for now
-/bundles
 /demo-build
 /dist
 /coverage
@@ -22,15 +21,8 @@ npm-debug.log
 /demo/**/*.js.map
 /demo/**/*.d.ts
 !/demo/custom-typings.d.ts
-/components/**/*.js
-/components/**/*.js.map
-/components/**/*.d.ts
-ng2-select.js
-ng2-select.js.map
-ng2-select.d.ts
 
 /logs
 
 factories
 
-/**/*.metadata.json
