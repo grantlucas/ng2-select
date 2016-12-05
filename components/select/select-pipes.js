@@ -23,10 +23,11 @@ var HighlightPipe = (function () {
         }
         return value;
     };
-    HighlightPipe = __decorate([
-        core_1.Pipe({ name: 'highlight' }), 
-        __metadata('design:paramtypes', [])
-    ], HighlightPipe);
+    HighlightPipe.decorators = [
+        { type: core_1.Pipe, args: [{ name: 'highlight' },] },
+    ];
+    /** @nocollapse */
+    HighlightPipe.ctorParameters = [];
     return HighlightPipe;
 }());
 exports.HighlightPipe = HighlightPipe;
@@ -36,4 +37,3 @@ function stripTags(input) {
     return input.replace(commentsAndPhpTags, '').replace(tags, '');
 }
 exports.stripTags = stripTags;
-//# sourceMappingURL=select-pipes.js.map

@@ -5,6 +5,7 @@ import { OptionsBehavior } from './select-interfaces';
 export declare class SelectComponent implements OnInit {
     private sanitizer;
     allowClear: boolean;
+    allowSearch: boolean;
     placeholder: string;
     idField: string;
     textField: string;
