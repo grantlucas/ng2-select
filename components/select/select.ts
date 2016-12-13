@@ -521,12 +521,15 @@ export class SelectComponent implements OnInit {
   }
 
   private selectMatch(value:SelectItem, e:Event = void 0):void {
-    if (e) {
-      e.preventDefault();
-    }
+    //if (e) {
+    //  e.preventDefault();
+    //}
     if (this.options.length <= 0) {
       return;
     }
+
+    this.activeOption = value;
+
     if (this.multiple === true) {
       this.active.push(value);
       this.data.next(this.active);

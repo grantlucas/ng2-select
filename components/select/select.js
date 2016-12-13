@@ -286,12 +286,13 @@ var SelectComponent = (function () {
     };
     SelectComponent.prototype.selectMatch = function (value, e) {
         if (e === void 0) { e = void 0; }
-        if (e) {
-            e.preventDefault();
-        }
+        //if (e) {
+        //  e.preventDefault();
+        //}
         if (this.options.length <= 0) {
             return;
         }
+        this.activeOption = value;
         if (this.multiple === true) {
             this.active.push(value);
             this.data.next(this.active);
