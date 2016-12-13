@@ -7,15 +7,15 @@ var off_click_1 = require('./select/off-click');
 var SelectModule = (function () {
     function SelectModule() {
     }
-    SelectModule.decorators = [
-        { type: core_1.NgModule, args: [{
-                    imports: [common_1.CommonModule],
-                    declarations: [select_1.SelectComponent, select_pipes_1.HighlightPipe, off_click_1.OffClickDirective],
-                    exports: [select_1.SelectComponent, select_pipes_1.HighlightPipe, off_click_1.OffClickDirective]
-                },] },
-    ];
-    /** @nocollapse */
-    SelectModule.ctorParameters = function () { return []; };
+    SelectModule = __decorate([
+        core_1.NgModule({
+            imports: [common_1.CommonModule],
+            declarations: [select_1.SelectComponent, select_pipes_1.HighlightPipe, off_click_1.OffClickDirective],
+            exports: [select_1.SelectComponent, select_pipes_1.HighlightPipe, off_click_1.OffClickDirective]
+        }), 
+        __metadata('design:paramtypes', [])
+    ], SelectModule);
     return SelectModule;
 }());
 exports.SelectModule = SelectModule;
+//# sourceMappingURL=select.module.js.map

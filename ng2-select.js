@@ -5,3 +5,4 @@ function __export(m) {
 __export(require('./components/select/select'));
 var select_module_1 = require('./components/select.module');
 exports.SelectModule = select_module_1.SelectModule;
+//# sourceMappingURL=ng2-select.js.map
