@@ -14,17 +14,16 @@ var OffClickDirective = (function () {
     OffClickDirective.prototype.ngOnDestroy = function () {
         document.removeEventListener('click', this.offClickHandler);
     };
-    __decorate([
-        core_1.Input('offClick'), 
-        __metadata('design:type', Object)
-    ], OffClickDirective.prototype, "offClickHandler", void 0);
-    OffClickDirective = __decorate([
-        core_1.Directive({
-            selector: '[offClick]'
-        }), 
-        __metadata('design:paramtypes', [])
-    ], OffClickDirective);
+    OffClickDirective.decorators = [
+        { type: core_1.Directive, args: [{
+                    selector: '[offClick]'
+                },] },
+    ];
+    /** @nocollapse */
+    OffClickDirective.ctorParameters = function () { return []; };
+    OffClickDirective.propDecorators = {
+        'offClickHandler': [{ type: core_1.Input, args: ['offClick',] },],
+    };
     return OffClickDirective;
 }());
 exports.OffClickDirective = OffClickDirective;
-//# sourceMappingURL=off-click.js.map
