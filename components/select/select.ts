@@ -140,10 +140,9 @@ let styles = `
         <li *ngFor="let o of options" role="menuitem">
           <div class="ui-select-choices-row"
                [class.active]="isActive(o)"
-               (mouseenter)="selectActive(o)"
                (click)="selectMatch(o, $event)">
-            <a href="javascript:void(0)" class="dropdown-item">
-              <div [innerHtml]="sanitize(o.text | highlight:inputValue)"></div>
+            <a class="dropdown-item">
+              <div [innerHtml]="sanitize(o.text | highlight:inputValue)" (click)="selectMatch(o, $event)"></div>
             </a>
           </div>
         </li>
@@ -157,12 +156,11 @@ let styles = `
   
           <div *ngFor="let o of c.children"
                class="ui-select-choices-row"
-               [class.active]="isActive(o)"
-               (mouseenter)="selectActive(o)"
+               [class.active]="isActive(o)"               
                (click)="selectMatch(o, $event)"
                [ngClass]="{'active': isActive(o)}">
-            <a href="javascript:void(0)" class="dropdown-item">
-              <div [innerHtml]="sanitize(o.text | highlight:inputValue)"></div>
+            <a class="dropdown-item">
+              <div [innerHtml]="sanitize(o.text | highlight:inputValue)" (click)="selectMatch(o, $event)"></div>
             </a>
           </div>
         </li>
@@ -206,11 +204,10 @@ let styles = `
           class="ui-select-choices dropdown-menu" role="menu">
         <li *ngFor="let o of options" role="menuitem">
           <div class="ui-select-choices-row"
-               [class.active]="isActive(o)"
-               (mouseenter)="selectActive(o)"
+               [class.active]="isActive(o)"               
                (click)="selectMatch(o, $event)">
             <a href="javascript:void(0)" class="dropdown-item">
-              <div [innerHtml]="sanitize(o.text | highlight:inputValue)"></div>
+              <div [innerHtml]="sanitize(o.text | highlight:inputValue)" (click)="selectMatch(o, $event)"></div>
             </a>
           </div>
         </li>
@@ -224,12 +221,11 @@ let styles = `
   
           <div *ngFor="let o of c.children"
                class="ui-select-choices-row"
-               [class.active]="isActive(o)"
-               (mouseenter)="selectActive(o)"
+               [class.active]="isActive(o)"               
                (click)="selectMatch(o, $event)"
                [ngClass]="{'active': isActive(o)}">
             <a href="javascript:void(0)" class="dropdown-item">
-              <div [innerHtml]="sanitize(o.text | highlight:inputValue)"></div>
+              <div [innerHtml]="sanitize(o.text | highlight:inputValue)" (click)="selectMatch(o, $event)"></div>
             </a>
           </div>
         </li>
@@ -452,7 +448,7 @@ export class SelectComponent implements OnInit {
     }
   }
 
-  protected  mainClick(event:any):void {
+  protected mainClick(event:any):void {
     if (this.inputMode === true || this._disabled === true) {
       return;
     }
