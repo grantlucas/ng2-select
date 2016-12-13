@@ -140,6 +140,7 @@ let styles = `
         <li *ngFor="let o of options" role="menuitem">
           <div class="ui-select-choices-row"
                [class.active]="isActive(o)"
+               
                (click)="selectMatch(o, $event)">
             <a class="dropdown-item">
               <div [innerHtml]="sanitize(o.text | highlight:inputValue)" (click)="selectMatch(o, $event)"></div>
@@ -156,7 +157,8 @@ let styles = `
   
           <div *ngFor="let o of c.children"
                class="ui-select-choices-row"
-               [class.active]="isActive(o)"               
+               [class.active]="isActive(o)"
+               
                (click)="selectMatch(o, $event)"
                [ngClass]="{'active': isActive(o)}">
             <a class="dropdown-item">
@@ -204,9 +206,10 @@ let styles = `
           class="ui-select-choices dropdown-menu" role="menu">
         <li *ngFor="let o of options" role="menuitem">
           <div class="ui-select-choices-row"
-               [class.active]="isActive(o)"               
+               [class.active]="isActive(o)"
+               
                (click)="selectMatch(o, $event)">
-            <a href="javascript:void(0)" class="dropdown-item">
+            <a class="dropdown-item">
               <div [innerHtml]="sanitize(o.text | highlight:inputValue)" (click)="selectMatch(o, $event)"></div>
             </a>
           </div>
@@ -221,10 +224,11 @@ let styles = `
   
           <div *ngFor="let o of c.children"
                class="ui-select-choices-row"
-               [class.active]="isActive(o)"               
+               [class.active]="isActive(o)"    
+               
                (click)="selectMatch(o, $event)"
                [ngClass]="{'active': isActive(o)}">
-            <a href="javascript:void(0)" class="dropdown-item">
+            <a class="dropdown-item">
               <div [innerHtml]="sanitize(o.text | highlight:inputValue)" (click)="selectMatch(o, $event)"></div>
             </a>
           </div>
@@ -518,7 +522,6 @@ export class SelectComponent implements OnInit {
 
   private selectMatch(value:SelectItem, e:Event = void 0):void {
     if (e) {
-      e.stopPropagation();
       e.preventDefault();
     }
     if (this.options.length <= 0) {
