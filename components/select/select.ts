@@ -46,6 +46,7 @@ let styles = `
     max-height: 200px;
     overflow-x: hidden;
     margin-top: 0;
+    cursor: pointer;
   }
   
   .ui-select-multiple .ui-select-choices {
@@ -319,7 +320,8 @@ export class SelectComponent implements OnInit {
   }
 
   public sanitize(html:string):SafeHtml {
-    return this.sanitizer.bypassSecurityTrustHtml(html);
+    return html;
+    //return this.sanitizer.bypassSecurityTrustHtml(html);
   }
 
   public inputEvent(e:any, isUpMode:boolean = false):void {
@@ -521,9 +523,10 @@ export class SelectComponent implements OnInit {
   }
 
   private selectMatch(value:SelectItem, e:Event = void 0):void {
-    //if (e) {
-    //  e.preventDefault();
-    //}
+    if (e) {
+      e.stopPropagation();
+      e.preventDefault();
+    }
     if (this.options.length <= 0) {
       return;
     }
