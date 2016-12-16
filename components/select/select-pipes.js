@@ -27,7 +27,7 @@ var HighlightPipe = (function () {
         { type: core_1.Pipe, args: [{ name: 'highlight' },] },
     ];
     /** @nocollapse */
-    HighlightPipe.ctorParameters = function () { return []; };
+    HighlightPipe.ctorParameters = [];
     return HighlightPipe;
 }());
 exports.HighlightPipe = HighlightPipe;

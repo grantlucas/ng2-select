@@ -20,7 +20,7 @@ var OffClickDirective = (function () {
                 },] },
     ];
     /** @nocollapse */
-    OffClickDirective.ctorParameters = function () { return []; };
+    OffClickDirective.ctorParameters = [];
     OffClickDirective.propDecorators = {
         'offClickHandler': [{ type: core_1.Input, args: ['offClick',] },],
     };

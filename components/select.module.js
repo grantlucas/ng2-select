@@ -15,7 +15,7 @@ var SelectModule = (function () {
                 },] },
     ];
     /** @nocollapse */
-    SelectModule.ctorParameters = function () { return []; };
+    SelectModule.ctorParameters = [];
     return SelectModule;
 }());
 exports.SelectModule = SelectModule;

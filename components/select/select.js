@@ -319,10 +319,10 @@ var SelectComponent = (function () {
                 },] },
     ];
     /** @nocollapse */
-    SelectComponent.ctorParameters = function () { return [
+    SelectComponent.ctorParameters = [
         { type: core_1.ElementRef, },
         { type: platform_browser_1.DomSanitizer, },
-    ]; };
+    ];
     SelectComponent.propDecorators = {
         'allowClear': [{ type: core_1.Input },],
         'allowSearch': [{ type: core_1.Input },],
